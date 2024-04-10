@@ -17,7 +17,7 @@ Data Cleaning and Understanding:
 * 
 ![image](https://github.com/Mahizha-N-S/Buckman_data_analysis/assets/102713447/3a433ab0-860a-429c-85da-7130f6cbfd54)
 
-## 2.Best Investment Decision Identification:8 
+## 2.Best Investment Decision Identification:
 
 * To choose the best features used Chi Square Test
 
