@@ -67,7 +67,7 @@ loaded_rf_clf = load('random_forest_model.joblib')
 * **Knowledge is Power:** Individuals with a deeper understanding of the stock market and various investment products tend to make more informed decisions. It's crucial to educate investors about these aspects.
 * **Income Matters:** Household income plays a pivotal role in investment decisions. Higher-income individuals often have more disposable income, allowing them to take on riskier investments.  
 * **Enhancing the Recommendation System:**
-    +To improve the system, consider adding more features that influence investment choices, such as investment goals, risk tolerance, and current market conditions.
+    + To improve the system, consider adding more features that influence investment choices, such as investment goals, risk tolerance, and current market conditions.
     + Utilizing more advanced machine learning models and techniques could also enhance the system's accuracy and effectiveness.
 
 * Future research could focus on integrating real-time market data and economic indicators into the recommendation system for more current and precise investment advice
