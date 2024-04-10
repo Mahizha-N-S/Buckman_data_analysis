@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Investment Recommendation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Investment Recommendation</h1>
+    <form id="investmentForm">
+        <label for="knowledge_sharemarket">Knowledge level about sharemarket (0-10):</label>
+        <input type="number" id="knowledge_sharemarket" name="knowledge_sharemarket" min="0" max="10" required><br><br>
+        
+        <label for="knowledge_investment">Knowledge level about different investment product (0-10):</label>
+        <input type="number" id="knowledge_investment" name="knowledge_investment" min="0" max="10" required><br><br>
+        
+        <label for="awareness_source">Source of Awareness about Investment:</label>
+        <select id="awareness_source" name="awareness_source">
+            <option value="0">Television</option>
+            <option value="1">Workers</option>
+            <option value="2">Family</option>
+            <option value="3">Magazine</option>
+            <option value="4">Others</option>
+            <option value="5">Flash Board</option>
+            <option value="6">Friends</option>
+        </select><br><br>
+        
+        <label for="household_income">Household Income:</label>
+        <select id="household_income" name="household_income">
+            <option value="0">US$ 2736 to US$ 8205</option>
+            <option value="1">US$ 19146 to US$ 24615</option>
+            <option value="2">US$ 13676 to US$ 19145</option>
+            <option value="3">Above US$ 30086</option>
+            <option value="4">US$ 24616 to US$ 30085</option>
+            <option value="5">US$ 2735</option>
+            <option value="6">US$ 8206 to US$ 13675</option>
+        </select><br><br>
+
+        <button type="button" id="submitBtn">Submit</button>
+    </form>
+
+    <div id="predictionResult"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#submitBtn").click(function() {
+                var formData = $("#investmentForm").serialize();
+                $.ajax({
+                    url: "/predict",
+                    type: "POST",
+                    data: formData,
+                    success: function(response) {
+                        $("#predictionResult").html(response);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
